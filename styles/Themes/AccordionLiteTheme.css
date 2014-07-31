@@ -115,5 +115,13 @@ label {
     font-weight: normal;
 }
 
+.fb-like iframe{
+	width:250px !important;
+	height:200px !important;
+}
+
+.fb_iframe_widget iframe {
+	position: fixed !important;
+}
 
 
