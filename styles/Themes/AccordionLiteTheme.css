@@ -1,12 +1,32 @@
-﻿.themeBlueParent {
-    background-color : blue;    
+@media (max-width: 991px) {
+    .options {
+        margin-right: -15px;
+    }
 
+    .elementContainer {
+        margin-right: -15px;
+    }
+
+    .col-md-9 {
+        width:100% !important;
+        margin-left:0px !important;
+        margin-bottom: 20px;
+    }
 }
 
-.themeBlueChild {
-    background-color : lightblue
+@media (min-width: 992px) and (max-width: 1225px) {
+    .options {
+        padding: 10px 0 0 10px;
+    }
 }
 
+@media (max-width: 735px) {   
+    .col-md-9 {
+        height: auto !important;
+        width:100% !important;
+        margin-bottom: 20px;
+    }
+}
 
 .gradientTheme {
     color: white;    
@@ -74,7 +94,6 @@ span.highATT {
     color: crimson;
 }
 
-
 .example_code {
     width: auto;
     background-color: #ffffff;
@@ -84,6 +103,9 @@ span.highATT {
     font-size: 14px;
     font-family: Consolas,"courier new";
     border-radius: 4px;
+	margin-top: 10px; 
+	margin-left: 50px;
+	overflow: auto;
 }
 
 .contentHeader {
