@@ -1,6 +1,8 @@
 AccordionLite
 =============
 
+http://Jithesh-Menon.github.io/AccordionLite/index.html
+
 There are couple of instructions that you must follow while developing accordion controls using AccordionLite. 
 
 1) Set Arrow Images:- While developing accordion control, if we are using Easy Implementation method we can use setArrow       function to set accordion arrows. But we should call this function before the accordion control generating function         'AccordionLite.accordion'. 
