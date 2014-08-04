@@ -12,7 +12,7 @@ There are couple of instructions that you must follow while developing accordion
 
    Since the accordion arrows are the part of accordion control we should set these values/path before the accordion control    generation. Once we set the image uri path, it will refer that path to access the accordion arrow images during the         generation of accordion control. 
  
-   Script:-
+   Script:-<br/>
     $(document).ready(function(){
        AccordionLite.setArrow({ 'upArrow': '../Images/arrowUp.png', 'downArrow': '../Images/arrowDown.png' });                     AccordionLite.accordion(accordion); 
     });
