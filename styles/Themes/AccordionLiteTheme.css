@@ -17,6 +17,11 @@
         margin-top: 10px !important;
         margin-left: 50px !important;
     }
+
+    #accordionLiteDetailsWrapper {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1225px) {
@@ -25,21 +30,19 @@
     }
 }
 
-@media (max-width: 735px) {   
-    .col-md-9 {
+@media (max-width: 735px) {
+    #accordionLiteDetailsWrapper {
         height: auto !important;
-        width:100% !important;
-        margin-bottom: 20px;
     }
 }
 
 .result {
-        margin-top: 10px;
-        margin-left: 300px;
+    margin-top: 10px;
+    margin-left: 300px;
 }
 
 .gradientTheme {
-    color: white;    
+    color: white;
     background: -webkit-gradient(linear, left top, left bottom, from(#6feaf2), to(#38b4bc)) !important;
     background: -webkit-linear-gradient(top, #6feaf2, #38b4bc) !important;
     background: -moz-linear-gradient(top, #6feaf2, #38b4bc) !important;
@@ -85,9 +88,9 @@
     font-size: large;
 }
 
-.creditJqAccordionSelected  {
-   cursor: pointer;
-   color: #363636;
+.creditJqAccordionSelected {
+    cursor: pointer;
+    color: #363636;
     margin-top: -33px;
     padding-left: 50px;
     font-weight: bold;
@@ -117,9 +120,9 @@ span.highATT {
     font-size: 14px;
     font-family: Consolas,"courier new";
     border-radius: 4px;
-	margin-top: 10px; 
-	margin-left: 50px;
-	overflow: auto;
+    margin-top: 10px;
+    margin-left: 50px;
+    overflow: auto;
 }
 
 .contentHeader {
@@ -149,13 +152,11 @@ label {
     font-weight: normal;
 }
 
-.fb-like iframe{
-	width:450px !important;
-	height:450px !important;
+.fb-like iframe {
+    width: 450px !important;
+    height: 450px !important;
 }
 
 .fb_iframe_widget iframe {
-	position: fixed !important;
+    position: fixed !important;
 }
-
-
