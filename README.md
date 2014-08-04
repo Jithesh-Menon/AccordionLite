@@ -8,7 +8,7 @@ Demo
 http://Jithesh-Menon.github.io/AccordionLite/index.html
 
 Instructions
-============
+------------
 
 There are couple of instructions that you must follow while developing accordion controls using AccordionLite. 
 
@@ -21,7 +21,7 @@ There are couple of instructions that you must follow while developing accordion
 2) Set Height Value:- While developing accordion control, we can set the child element container height using setHeight        function. But we should call this function only after the the accordion control generating function                         'AccordionLite.accordion'.
 
 Advantages
-==========
+----------
 
 Easy Implementation:  <br/>
 AccordionLite makes it easier for the user by supporting easy implementation of accordion functionality. One of the major advantage of AccordionLite is easy implementation, user can download the AccordionLite plugin js file. By reffering the same on top of your html file and with one line html code and couple of lines of script will create the accordion for the user.
