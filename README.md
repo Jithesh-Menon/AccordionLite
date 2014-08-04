@@ -1,10 +1,14 @@
 AccordionLite
 =============
+Easy implementation of accordion control with less code.
 
-For AccordionLite Demo kindly visit the url mentioned below:- 
+AccordionLite Demo
+==================
 
 http://Jithesh-Menon.github.io/AccordionLite/index.html
 
+Instructions
+============
 
 There are couple of instructions that you must follow while developing accordion controls using AccordionLite. 
 
