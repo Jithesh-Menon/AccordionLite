@@ -2,8 +2,8 @@ AccordionLite
 =============
 Easy implementation of accordion control with less code.
 
-AccordionLite Demo
-==================
+Demo
+-----
 
 http://Jithesh-Menon.github.io/AccordionLite/index.html
 
