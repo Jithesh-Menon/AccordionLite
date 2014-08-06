@@ -41,13 +41,13 @@ var AccordionLite = (function () {
                 }
             });
 
-            $tab.slideDown("slow", function () { });
-            $(this).children('span').css("background", "url(" + upArrow + ") center center no-repeat");
+            $tab.slideDown("slow", function () { });            
             $tab.removeClass('hide');
             for (var i = 0; i < exceptTabs.length; i++) {
                 exceptTabs[i].slideUp("slow", function () { });
-                exceptTabs[i].context.children[0].style.background = "url(" + downArrow + ") center center no-repeat"
+                $container.find('span.images').css("background", "url(" + downArrow + ") center center no-repeat");
             }
+            $(this).children('span.images').css("background", "url(" + upArrow + ") center center no-repeat");   
             if (scrollContainer !='') {
                 $container.find('.elementContainer').css('overflow-y', scrollContainer);
             }
