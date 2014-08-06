@@ -21,11 +21,11 @@ var AccordionLite = (function () {
         $(document).on('click', ".easyAccordion", function () {
             var accordionTexts = [], exceptCurrentTabTexts = [], exceptTabs = []; $tab = '', $selectedTabtext = '', accordionText = '';
             $(".easyAccordion").each(function (i) {
-                accordionTexts.push($(".easyAccordion").children('div.headerElement')[i].innerText.trim());
+                accordionTexts.push($(".easyAccordion").children('div.headerElement')[i].innerHTML.trim());
             });
 
             $tab = $(this).next();
-            $selectedTabtext = $(this).children('div.headerElement')[0].innerText.trim();
+            $selectedTabtext = $(this).children('div.headerElement')[0].innerHTML.trim();
 
             $.grep(accordionTexts, function (accordionText, i) {
                 if (accordionText.toLowerCase() != $selectedTabtext.toLowerCase()) {
@@ -34,7 +34,7 @@ var AccordionLite = (function () {
             });
 
             $(".easyAccordion").each(function (i) {
-                var currentHeaderName = $(".easyAccordion").find('div.headerElement')[i].innerText.trim();
+                var currentHeaderName = $(".easyAccordion").find('div.headerElement')[i].innerHTML.trim();
                 var valueExists = $.inArray(currentHeaderName, exceptCurrentTabTexts);
                 if (valueExists != -1) {
                     exceptTabs.push($(this).next());
