@@ -25,8 +25,7 @@
         });
     </script>
 
-   
-<script>
+    <script>
 	(function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
@@ -36,59 +35,17 @@
 	}(document, 'script', 'facebook-jssdk'));
 </script>
 
-
-
 </head>
 <body>
-
+    
     <div id="header" style="height: 100px; width: 100%; background-color: #363636; color: whitesmoke; text-align: center; font-size: x-large; padding: 30px; border-top: 1px solid white">
         AccordionLite Using Simple Jquery
     </div>
-
     <div class="container" style="width: 100%">
         <div class="row">
-            <!-- <div class="col-md-3" id="accordionLite" style="margin-left: -15px;">
-                <div class="options easyAccordion">
-                    Cutomizations
-                    <span class="images"></span>
-                </div>
-                <div class="elementContainer">
-                    <div class="element">Personal Details</div>
-                    <div class="element">Academic Details</div>
-                    <div class="element">Passport Details</div>
-                    <div class="element">English/Math Score</div>
-                    <div class="element">Acheivements</div>
-                    <div class="element">Working Experiments</div>
-                    <div class="element">Skills & Hobbies</div>
-                    <div class="element">Documents</div>
-                </div>
-                <div class="options easyAccordion">
-                    Themes
-                    <span class="images"></span>
-                </div>
-                <div class="hide elementContainer">
-                    <div class="element">Flat Design</div>
-                    <div class="element">Glossy Design</div>
-                    <div class="element">Curved Design</div>
-                    <div class="element">Blue</div>
-                    <div class="element">Orange</div>
-                    <div class="element">Plain</div>
-                </div>
-                <div class="options easyAccordion">
-                   Other
-                     <span class="images"></span>
-                </div>
-                <div class="hide elementContainer">
-                    <div class="element">Sample Entry</div>
-                    <div class="element">Sample Entry</div>
-                    <div class="element">Sample Entry</div>
-                    <div class="element">Sample Entry</div>
-                    <div class="element">Sample Entry</div>
-                </div>
-            </div>-->
-            <div class="col-md-3" id="accordionLite" style="margin-left: -15px;"></div>
-            <div class="col-md-9" style="background-color: #ededed; height: 545px; margin-left: -14px; width: 77%; border: 1px solid white;">
-                <div id="accordionLiteDetailsWrapper">
+            <div class="col-md-3" id="accordionLite" style="margin-left: -15px;cursor: pointer;"></div>
+            <div class="col-md-9" style="height: 545px; border: 1px solid white;">
+                <div id="accordionLiteDetailsWrapper" style="margin-left: -30px;margin-right: -30px;height: 545px;background-color: #ededed;">
                     <div id="group01">
                         <div class="contentHeader">Easy Accordion</div>
                         <div style="margin-top: 10px; margin-left: 50px;">
@@ -143,8 +100,8 @@
 
                             <span class="highLT">&lt;</span><span class="highELE">div id="accordionLite"</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">div class="options easyAccordion"</span><span class="highGT">&gt;</span><br />
-                            Cutomizations
-                            <br />
+							 <span class="highLT">&lt;</span><span class="highELE">div class="headerElement"</span><span class="highGT">&gt;</span>	Cutomizations
+                            <span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">span class="images"</span><span class="highGT">&gt;</span>
                             <span class="highLT">&lt;</span><span class="highELE">/span</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
@@ -161,14 +118,15 @@
                             <span class="highELE">Sample Entry</span><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
 
-                            <span class="highLT">&lt;</span><span class="highELE">div id="accordionLite"</span><span class="highGT">&gt;</span><br />
+                           
                             <span class="highLT">&lt;</span><span class="highELE">div class="options easyAccordion"</span><span class="highGT">&gt;</span><br />
+							 <span class="highLT">&lt;</span><span class="highELE">div class="headerElement"</span><span class="highGT">&gt;</span>
                             Themes
-                            <br />
+                            <span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">span class="images"</span><span class="highGT">&gt;</span>
                             <span class="highLT">&lt;</span><span class="highELE">/span</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
-                            <span class="highLT">&lt;</span><span class="highELE">div class="elementContainer"</span><span class="highGT">&gt;</span><br />
+                            <span class="highLT">&lt;</span><span class="highELE">div class="hide elementContainer"</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">div class="element"</span><span class="highGT">&gt;</span>
                             <span class="highELE">Sample Entry</span><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">div class="element"</span><span class="highGT">&gt;</span>
@@ -183,12 +141,13 @@
 
                             <span class="highLT">&lt;</span><span class="highELE">div id="accordionLite"</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">div class="options easyAccordion"</span><span class="highGT">&gt;</span><br />
+							<span class="highLT">&lt;</span><span class="highELE">div class="headerElement"</span><span class="highGT">&gt;</span>
                             Other
-                            <br />
+                            <span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">span class="images"</span><span class="highGT">&gt;</span>
                             <span class="highLT">&lt;</span><span class="highELE">/span</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
-                            <span class="highLT">&lt;</span><span class="highELE">div class="elementContainer"</span><span class="highGT">&gt;</span><br />
+                            <span class="highLT">&lt;</span><span class="highELE">div class="hide elementContainer"</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">div class="element"</span><span class="highGT">&gt;</span>
                             <span class="highELE">Sample Entry</span><span class="highLT">&lt;</span><span class="highELE">/div</span><span class="highGT">&gt;</span><br />
                             <span class="highLT">&lt;</span><span class="highELE">div class="element"</span><span class="highGT">&gt;</span>
@@ -233,7 +192,7 @@
                         </div>
                         <label style="font-size: 18px; margin-top: 10px; margin-left: 50px; color: darkslategray;">Result :-</label>
                         <div class="result" >
-                            <img src="../AccordionLite-master/images/Screenshots/image.PNG" style="width: 270px; height: 270px;" />
+                            <img src="../AccordionLite-master/images/Screenshots/image.png" style="width: 270px; height: 270px;" />
                         </div>
                     </div>
                     <div id="group04" class="hide">
@@ -250,7 +209,7 @@
                         <div class="example_code" >
                             $(document).ready(<span class="highScript">function</span>(){<br />
                             &nbsp;
-	                            AccordionLite.setHeight({  <span class="highELE">'height'</span>:  <span class="highELE">'200px'</span>,  <span class="highELE">'overflow-y'</span>:  <span class="highELE">'scroll'</span> });
+	                            AccordionLite.setHeight({  <span class="highELE">'height'</span>:  <span class="highELE">'200px'</span>,  <span class="highELE">'overflow-y'</span>:  <span class="highELE">'auto'</span> });
                             <br />
                             });
                         </div>
@@ -570,7 +529,7 @@
                         </div>
                         <div style="margin-top: 50px; padding-left: 400px;">
                             <div id="fb-root"></div>
-                            <div class="fb-like" data-href="https://github.com/Jithesh-Menon/AccordionLite" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" data-layout="standard" data-like="false" data-share="true"></div>
+                            <div class="fb-like" data-href="https://www.facebook.com/pages/AccordionLite/1531696630376739" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true" data-layout="standard" data-like="false" data-share="true"></div>
                         </div>
                     </div>
                 </div>
