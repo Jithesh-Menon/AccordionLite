@@ -31,4 +31,4 @@ Like other accordion plugin, AccordionLite also supports different level of cust
 Unlike other accordion plugin, AccordionLite provides default themes for accordion. User can use any of those or user can customize the theme by doing the necessary changes in CSS file which will be available with our AccordionLite Plugin.
 
 File Size:   <br/>
-AccordionLite provides a lightweight javascript file to achieve the accordion functionality. Since it is lightweight, the end user will experience an infinitesimal hype in performance.
+AccordionLite provides a lightweight javascript file(<b>size of 4kb</b>) to achieve the accordion functionality. Since it is lightweight, the end user will experience an infinitesimal hype in performance.
