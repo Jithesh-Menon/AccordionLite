@@ -1,4 +1,4 @@
-﻿
+
 var AccordionLite = (function () {
     var $container = '', accordion = '', upArrow = '', downArrow = ''; scrollContainer = '';
     
@@ -12,8 +12,8 @@ var AccordionLite = (function () {
     function normalAccordionStarter() {
         $container = $('#accordionLite');
         $container.children('.elementContainer').not('.elementContainer:first').addClass('hide');
-        $container.find('.easyAccordion:first > span').css('background', "url(" + upArrow + ")center center no-repeat");
-        $container.children('.easyAccordion').not('.easyAccordion:first').children('span').css('background', "url(" + downArrow + ")center center no-repeat");
+        $container.find(".easyAccordion:first > span.images").css("background", "url(" + upArrow + ")center center no-repeat");
+        $container.children(".easyAccordion").not(".easyAccordion:first").children("span.images").css("background", "url(" + downArrow + ")center center no-repeat");
         $container.find('.elementContainer .element:first').addClass('active')
     }
 
@@ -21,11 +21,11 @@ var AccordionLite = (function () {
         $(document).on('click', ".easyAccordion", function () {
             var accordionTexts = [], exceptCurrentTabTexts = [], exceptTabs = []; $tab = '', $selectedTabtext = '', accordionText = '';
             $(".easyAccordion").each(function (i) {
-                accordionTexts.push(($(".easyAccordion")[i].childNodes[0].data.trim()));
+                accordionTexts.push($(".easyAccordion").children("div.headerElement")[i].innerHTML.trim());
             });
 
             $tab = $(this).next();
-            $selectedTabtext = $(this)[0].childNodes[0].data.trim();
+            $selectedTabtext = $(this).children("div.headerElement")[0].innerHTML.trim();
 
             $.grep(accordionTexts, function (accordionText, i) {
                 if (accordionText.toLowerCase() != $selectedTabtext.toLowerCase()) {
@@ -33,14 +33,14 @@ var AccordionLite = (function () {
                 }
             });
 
-            $(".easyAccordion").each(function () {
-                for (var i = 0; i < exceptCurrentTabTexts.length; i++) {
-                    if (exceptCurrentTabTexts[i].toLowerCase() == $(this)[0].childNodes[0].data.trim().toLowerCase()) {
-                        exceptTabs.push(($(this).next()));
-                    }
+            $(".easyAccordion").each(function (e) {
+                var accordionTexts = $(".easyAccordion").find("div.headerElement")[e].innerHTML.trim();
+                var $accordion = $.inArray(accordionTexts, exceptCurrentTabTexts);
+                if ($accordion != -1) {
+                    exceptTabs.push($(this).next())
                 }
             });
-
+            
             $tab.slideDown("slow", function () { });            
             $tab.removeClass('hide');
             for (var i = 0; i < exceptTabs.length; i++) {
@@ -50,8 +50,7 @@ var AccordionLite = (function () {
             $(this).children('span.images').css("background", "url(" + upArrow + ") center center no-repeat");   
             if (scrollContainer !='') {
                 $container.find('.elementContainer').css('overflow-y', scrollContainer);
-            }
-            
+            }            
         });
 
         $(document).on('click', '.elementContainer .element', function () {
@@ -84,7 +83,7 @@ var AccordionLite = (function () {
 
     function accordionHeaderTemplate(header) {
         var templateAccordion = [
-            '<div class="options easyAccordion">{{ header }}',
+            '<div class="options easyAccordion"><div class="headerElement">{{ header }}</div>',
                '<span class="images"></span>',
             '</div>'
         ].join('');
