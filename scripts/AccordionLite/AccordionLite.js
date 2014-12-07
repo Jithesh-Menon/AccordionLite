@@ -33,8 +33,8 @@ var AccordionLite = (function () {
                 }
             });
 
-            $(".easyAccordion").each(function (e) {
-                var accordionTexts = $(".easyAccordion").find("div.headerElement")[e].innerHTML.trim();
+            $(".easyAccordion").each(function (i) {
+                var accordionTexts = $(".easyAccordion").find("div.headerElement")[i].innerHTML.trim();
                 var $accordion = $.inArray(accordionTexts, exceptCurrentTabTexts);
                 if ($accordion != -1) {
                     exceptTabs.push($(this).next())
