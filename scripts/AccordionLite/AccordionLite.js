@@ -1,7 +1,7 @@
 
 var AccordionLite = (function () {
     var $container = '', accordion = '', upArrow = '', downArrow = ''; scrollContainer = '';
-    
+
     function init(data) {
         var $accordion = accordionLiteCreator(data);
         $container = $('#accordionLite');
@@ -12,20 +12,20 @@ var AccordionLite = (function () {
     function normalAccordionStarter() {
         $container = $('#accordionLite');
         $container.children('.elementContainer').not('.elementContainer:first').addClass('hide');
-        $container.find(".easyAccordion:first > span.images").css("background", "url(" + upArrow + ")center center no-repeat");
-        $container.children(".easyAccordion").not(".easyAccordion:first").children("span.images").css("background", "url(" + downArrow + ")center center no-repeat");
+        $container.find('.easyAccordion:first > span.images').css('background', "url(" + upArrow + ")center center no-repeat");
+        $container.children('.easyAccordion').not('.easyAccordion:first').children('span.images').css('background', "url(" + downArrow + ")center center no-repeat");
         $container.find('.elementContainer .element:first').addClass('active')
     }
 
-    function bindEvents() {       
+    function bindEvents() {
         $(document).on('click', ".easyAccordion", function () {
             var accordionTexts = [], exceptCurrentTabTexts = [], exceptTabs = []; $tab = '', $selectedTabtext = '', accordionText = '';
             $(".easyAccordion").each(function (i) {
-                accordionTexts.push($(".easyAccordion").children("div.headerElement")[i].innerHTML.trim());
+                accordionTexts.push($(".easyAccordion").children('div.headerElement')[i].innerHTML.trim());
             });
 
             $tab = $(this).next();
-            $selectedTabtext = $(this).children("div.headerElement")[0].innerHTML.trim();
+            $selectedTabtext = $(this).children('div.headerElement')[0].innerHTML.trim();
 
             $.grep(accordionTexts, function (accordionText, i) {
                 if (accordionText.toLowerCase() != $selectedTabtext.toLowerCase()) {
@@ -34,13 +34,13 @@ var AccordionLite = (function () {
             });
 
             $(".easyAccordion").each(function (i) {
-                var accordionTexts = $(".easyAccordion").find("div.headerElement")[i].innerHTML.trim();
-                var $accordion = $.inArray(accordionTexts, exceptCurrentTabTexts);
-                if ($accordion != -1) {
-                    exceptTabs.push($(this).next())
+                var currentHeaderName = $(".easyAccordion").find('div.headerElement')[i].innerHTML.trim();
+                var valueExists = $.inArray(currentHeaderName, exceptCurrentTabTexts);
+                if (valueExists != -1) {
+                    exceptTabs.push($(this).next());
                 }
             });
-            
+
             $tab.slideDown("slow", function () { });            
             $tab.removeClass('hide');
             for (var i = 0; i < exceptTabs.length; i++) {
@@ -48,17 +48,17 @@ var AccordionLite = (function () {
                 $container.find('span.images').css("background", "url(" + downArrow + ") center center no-repeat");
             }
             $(this).children('span.images').css("background", "url(" + upArrow + ") center center no-repeat");   
-            if (scrollContainer !='') {
+            if (scrollContainer != '') {
                 $container.find('.elementContainer').css('overflow-y', scrollContainer);
-            }            
+            }
         });
 
         $(document).on('click', '.elementContainer .element', function () {
             if ($('.elementContainer .element').hasClass('active')) {
                 $('.elementContainer .element').removeClass('active')
-            } 
+            }
             $('#accordionLiteDetailsWrapper > div').addClass('hide');
-            var groupIdofParent=  $(this).parent().data('id');
+            var groupIdofParent = $(this).parent().data('id');
             var currentElementId = $(this).data('id');
             $(this).addClass('active');
             var idOfElementToShow = groupIdofParent + currentElementId;
@@ -69,10 +69,10 @@ var AccordionLite = (function () {
     function accordionLiteCreator(data) {
         if (data.length != 0) {
             for (var i = 0; i < data.length; i++) {
-                accordion = accordion + accordionHeaderTemplate(data[i].HeaderName) + '<div class="elementContainer" data-id="group'+i+'">';
+                accordion = accordion + accordionHeaderTemplate(data[i].HeaderName) + '<div class="elementContainer" data-id="group' + i + '">';
                 if (data[i].Elements.length != 0) {
                     for (var j = 0; j < data[i].Elements.length; j++) {
-                        accordion = accordion + accordionChildElements(data[i].Elements[j],j+1);
+                        accordion = accordion + accordionChildElements(data[i].Elements[j], j + 1);
                     }
                 }
                 accordion = accordion + '</div>';
@@ -83,8 +83,9 @@ var AccordionLite = (function () {
 
     function accordionHeaderTemplate(header) {
         var templateAccordion = [
-            '<div class="options easyAccordion"><div class="headerElement">{{ header }}</div>',
-               '<span class="images"></span>',
+            '<div class="options easyAccordion">',
+			'<div class="headerElement">{{ header }}</div>',
+            '<span class="images"></span>',
             '</div>'
         ].join('');
 
@@ -92,10 +93,10 @@ var AccordionLite = (function () {
         return templateAccordion;
     }
 
-    function accordionChildElements(element,position) {
+    function accordionChildElements(element, position) {
         var accordionElement = '';
         var accordionElements = [
-               '<div class="element" data-id='+position+'>{{ element }}</div>',
+               '<div class="element" data-id=' + position + '>{{ element }}</div>',
         ].join('');
 
         accordionElement = accordionElements.replace('{{ element }}', element);
@@ -117,14 +118,14 @@ var AccordionLite = (function () {
             $container.find('.element').css({ 'background-color': theme.elements.backgroundcolor, 'color': theme.elements.color });
         }
     }
-    
+
     function setHeight(height) {
-        if ($(height).prop('overflow-y') !='') {
+        if ($(height).prop('overflow-y') != '') {
             scrollContainer = $(height).prop('overflow-y');
             $container.find('.elementContainer').css({ 'height': $(height).prop('height'), 'overflow-y': scrollContainer });
         } else {
             $container.find('.elementContainer').css('height', $(height).prop('height'));
-        }        
+        }
     }
 
     $(function () {
@@ -146,7 +147,7 @@ var AccordionLite = (function () {
         },
         normalAccordion: function () {
             normalAccordionStarter();
-        }           
+        }
     }
 })();
 
